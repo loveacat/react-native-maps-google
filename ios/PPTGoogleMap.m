@@ -55,7 +55,7 @@
     // zoom value will be `none`. For this case, zoom must be hardcoded.
     zoom = ((NSNumber*)cameraPosition[@"zoom"]).doubleValue;
     if(!zoom) {
-        zoom = 16;
+        zoom = 15;
     }
 
     if (!cameraPosition[@"latitude"] || !cameraPosition[@"longitude"]) {
@@ -73,7 +73,7 @@
         CLLocationCoordinate2D origin = CLLocationCoordinate2DMake(latitude, longitude);
         
         [CATransaction begin];
-        [CATransaction setAnimationDuration:.3];
+        [CATransaction setAnimationDuration:.4];
         //GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
         //                                                        longitude:longitude
         //                                                             zoom:zoom];
